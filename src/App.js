@@ -7,7 +7,7 @@ import Popup from "./components/popup.js"
 function App() {
   const [pokemon,setPokemon]= useState({});
 
-
+  const [busqueda, setBusqueda]= useState("");
 
   const [buttonPopup,setButtonPopup]= useState(false);
 
@@ -16,6 +16,17 @@ function App() {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
     .then((response)=>response.json())
     .then((data)=>setPokemon(data));
+  };
+
+  const onChange = async e=>{
+    e.persist();
+    setBusqueda(e.target.value);
+  }
+  const fetchPokemonbyname = () => {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${busqueda}`)
+      .then((response) => response.json())
+      .then((data) => setPokemon(data))
+      ;
   };
 
   const getRandomInt=(min= 1,max=600)=>{
@@ -94,6 +105,14 @@ function App() {
              }
           </ul>
       </Popup>
+      <div className="containerInput">
+        <input
+          value={busqueda}
+          placeholder=" Nombre de Pokemon"
+          onChange={onChange}
+        /><br></br>
+        <button className="botonBusq"  onClick={() => fetchPokemonbyname()}>Buscar</button>
+      </div>
       </header>
     </div>
   );

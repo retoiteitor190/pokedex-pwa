@@ -7,6 +7,27 @@
     flex-direction: row;
 }
 
+.botonBusq {
+    margin: 5px;
+    cursor: pointer;
+    width: 15vw;
+    height: 5vh;
+    background-color: #41729f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.containerInput {
+    background: silver;
+    border: 1px solid #393939;
+    border-radius: 5px 5px 5px 5px;
+    color: #393939;
+    font-size: 12px;
+    padding: 5px;
+}
+
 .poke-image {
     height: 40vmin;
     pointer-events: none;
