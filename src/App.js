@@ -58,7 +58,7 @@ function App() {
       <header className="App-header">
         <div className='Git-Enlace'>
         <h3>Enlace de GitHub </h3>
-        <a className="alignCentral" href='https://github.com/retoiteitor190/Pokedex.git'>Git Alejandro Ruiz Moreno</a>
+        <a className="alignCentral" href='https://github.com/retoiteitor190/pokedex-pwa.git'>Git Alejandro Ruiz Moreno</a>
         </div>
       
         <div className='flex-container'>
